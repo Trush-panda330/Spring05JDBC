@@ -2,7 +2,9 @@ package uetak.Repository;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import uetak.entity.Shain;
@@ -10,6 +12,9 @@ import uetak.entity.Shain;
 @Repository
 @Qualifier("ShainRepositoryImpl")
 public class ShainRepositoryImpl implements ShainRepository {
+	
+	@Autowired
+	private NamedParameterJdbcTemplate jdbcTemplate;
 
 	@Override
 	public void findAll() {

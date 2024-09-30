@@ -13,7 +13,7 @@ public class Spring05JdbcApplication {
 	public static void main(String[] args) {		
 		//DIコンテナを作成
 		ConfigurableApplicationContext context = 
-				SpringApplication.run(SpringApplication.class, args);
+				SpringApplication.run(Spring05JdbcApplication.class, args);
 		
 		//社員リポジトリのインスタンスを呼ぶ
 		ShainRepository shainRepository = context.getBean(ShainRepositoryImpl.class);

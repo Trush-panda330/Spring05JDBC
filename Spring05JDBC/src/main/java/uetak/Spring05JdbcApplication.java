@@ -19,7 +19,13 @@ public class Spring05JdbcApplication {
 		ShainRepository shainRepository = context.getBean(ShainRepositoryImpl.class);
 		
 		//社員リストを取得
-		shainRepository.findAll();
+//		shainRepository.findAll();
+		
+		//社員を登録
+//		shainRepository.insertShain();
+		
+		//指定した社員のデータを取得
+		shainRepository.findByShainId();
 	}
 
 }

@@ -12,7 +12,7 @@ import uetak.entity.Shain;
 public class ShainRepositoryImpl implements ShainRepository {
 
 	@Override
-	public ArrayList<Shain> findAll() {
+	public void findAll() {
 		
 		//社員リストを作る
 		ArrayList<Shain> shainList = new ArrayList<>();
@@ -41,8 +41,26 @@ public class ShainRepositoryImpl implements ShainRepository {
 			+ ":" + shain.getGender() + ":" + shain.getNen() 
 			+ ":" + shain.getAddress());
 		}
+	}
+
+	@Override
+	public void insertShain() {
 		
-		return shainList;
+	}
+
+	@Override
+	public void findByShain() {
+		
+	}
+
+	@Override
+	public void updateShain() {
+		
+	}
+
+	@Override
+	public void deleteShain() {
+		
 	}
 
 }

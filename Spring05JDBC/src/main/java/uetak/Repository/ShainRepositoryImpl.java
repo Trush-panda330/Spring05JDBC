@@ -20,20 +20,24 @@ public class ShainRepositoryImpl implements ShainRepository {
 	@Override
 	public void findAll() {
 		//SQL文の作成
-		final String sql = "select id, name, gender, nen, address from shain";
+		final String sql 
+		= "select id, name, gender, nen, address from shain";
 
 		//SQLの実行
-		List<Shain> shainList = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Shain>(Shain.class));
+		List<Shain> shainList 
+		= jdbcTemplate.query(sql, new BeanPropertyRowMapper<Shain>(Shain.class));
 
+		// リストの中の社員を表示
 		for (Shain shain : shainList) {
-			System.out.println(shain.getId() + ":" + shain.getName() + ":"
-					+ shain.getGender() + ":" + shain.getNen() + ":" +shain.getAddress());
-
+		System.out.println(shain.getId() + ":" + shain.getName() 
+		+ ":" + shain.getGender() + ":" + shain.getNen() 
+		+ ":" + shain.getAddress());
 		}
 	}
 
 	@Override
 	public void insertShain() {
+		
 
 	}
 

@@ -36,6 +36,12 @@ public class ShainRepositoryImpl implements ShainRepository {
 		shain2.setAddress("福岡県福岡市");
 		shainList.add(shain2);
 		
+		for(Shain shain : shainList) {
+			System.out.println(shain.getId() + ":" +  shain.getName() 
+			+ ":" + shain.getGender() + ":" + shain.getNen() 
+			+ ":" + shain.getAddress());
+		}
+		
 		return shainList;
 	}
 

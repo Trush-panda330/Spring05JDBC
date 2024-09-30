@@ -8,7 +8,7 @@ public interface ShainRepository {
 	void insertShain();
 	
 	//社員を取得
-	void findByShain();
+	void findByShainId();
 	
 	//社員データの更新
 	void updateShain();
